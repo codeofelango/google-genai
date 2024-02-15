@@ -10,8 +10,8 @@ from vertexai.preview.generative_models import (
     Part,
 )
 
-PROJECT_ID = os.environ.get("GCP_PROJECT")  # Your Google Cloud Project ID
-LOCATION = os.environ.get("GCP_REGION")  # Your Google Cloud Project Region
+PROJECT_ID = os.environ.get("herfy-dev")  # Your Google Cloud Project ID
+LOCATION = os.environ.get("us-central1")  # Your Google Cloud Project Region
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 
 
@@ -83,15 +83,15 @@ with tab1:
 
     # Story premise
     character_name = st.text_input(
-        "Enter character name: \n\n", key="character_name", value="Mittens"
+        "Enter character name: \n\n", key="character_name", value="Elango"
     )
     character_type = st.text_input(
-        "What type of character is it? \n\n", key="character_type", value="Cat"
+        "What type of character is it? \n\n", key="character_type", value="Person"
     )
     character_persona = st.text_input(
         "What personality does the character have? \n\n",
         key="character_persona",
-        value="Mitten is a very friendly cat.",
+        value="Elango is a very friendly person.",
     )
     character_location = st.text_input(
         "Where does the character live? \n\n",
